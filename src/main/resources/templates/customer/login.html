@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.com">
+<head>
+    <meta charset="UTF-8">
+    <title>用户登陆</title>
+    <link rel="stylesheet" type="text/css" href="/css/customer.css">
+</head>
+<body>
+    <div class="frm">
+        <div class="title">
+            用户登陆
+        </div>
+
+        <form action="/customer/login_submit" method="post">
+            <table>
+                <tr>
+                    <td>手机号码</td>
+                    <td>
+                        <input type ="text" name="phoneNumber" required = "required"/>
+                    </td>
+                </tr>
+                <tr>
+                    <td>密码</td>
+                    <td>
+                        <input type="text" name="password" required="required"/>
+                    </td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td>
+                        <input type="submit" name="登录"/>
+                        <div th:text="${err}" style="color:red;margin:10px"></div>
+                    </td>
+                </tr>
+            </table>
+        </form>
+    </div>
+</body>
+</html>

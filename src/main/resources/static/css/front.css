@@ -1,0 +1,110 @@
+*{
+    margin:0px;
+    padding:0px;
+}
+/***********页面头部样式***********/
+#top_bar{
+    background-color: black;
+    font-size: 14px;
+}
+#top_bar nav{
+    width: 100%;
+    height: 30px;
+    line-height:30px;
+    margin: 0px auto;
+    color: aliceblue;
+}
+#top_bar nav span{
+    float:right;
+    height: 30px;
+    padding:0px 5px;
+    text-align: right;
+    line-height: 30px;
+    cursor: pointer;
+}
+#top_bar nav span a{
+    color: aliceblue;
+    text-decoration: none;
+}
+
+/************top图片***********/
+#banner{
+    width:100%;
+    height:300px;
+    margin:0px 0px;
+}
+#banner img{
+    display: block;
+}
+/******************menu***************/
+#menu{
+    width:1100px;
+    margin:0px auto;
+}
+#menu ul{
+    list-style: none;
+    border-top: 1px solid #adadad;
+    border-bottom:1px solid #adadad;
+    overflow:auto;
+}
+#menu ul li{
+    float: left;
+}
+#menu ul li a{
+    display: block;
+    height:50px;
+    line-height: 50px;
+    padding:0px 5px;
+    font-size: 22px;
+    color: #333;
+    text-decoration: none;
+}
+#menu ul li a:hover{
+    color: #ff6700;
+}
+#menu ul li a.on{
+    color: #ff6700;
+    font-weight: bold;
+}
+
+/****************商品首页的显示**********************/
+#container{
+    width: 1100px;
+    margin: 10px auto;
+}
+#container ul{
+    list-style: none;
+    overflow: auto;
+}
+#container ul li{
+    width: 230px;
+    height:350px;
+    /*border:1px solid #333;*/
+    margin:5px;
+    float: left;
+}
+#container ul li img{
+    display: block;
+    width: 230px;
+    height:230px;
+
+}
+#container ul li .info{
+    height:69px;
+    border-top: 1px solid #333333;
+
+}
+#container ul li .info p{
+    margin:5px 5px;
+    text-align: center;
+    font-size: 13px;
+}
+#container ul li .info .info1{
+    font-size: 16px;
+    font-weight: 550;
+}
+#container ul li .info .info2{
+    font-size: 14px;
+    font-weight: 550;
+    color: #ff6700;
+}

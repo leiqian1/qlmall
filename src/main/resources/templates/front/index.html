@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.com">
+<head>
+    <meta charset="UTF-8">
+    <title>首页</title>
+    <link type="text/css" rel="stylesheet" href="/css/front.css">
+</head>
+<body>
+    <div th:include="/front/top::top"></div>
+    <div id="container">
+        <ul>
+            <th:block th:each="g:${goodsList}">
+                <li>
+                    <img th:src="${g.picture}"/>
+                    <div class="info">
+                        <p class="info1">
+                            <span th:text="${g.goodsName}"></span>
+                        </p>
+                        <p>
+                            产地:
+                            <span th:text="${g.address}"></span>
+                        </p>
+                        <p class = "info2">
+                            价格:
+                            <span th:text="${g.price}"></span>
+                        </p>
+                    </div>
+                </li>
+            </th:block>
+        </ul>
+    </div>
+</body>
+</html>

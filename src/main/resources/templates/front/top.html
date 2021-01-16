@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.com">
+<head>
+    <meta charset="UTF-8">
+    <title>头部首页</title>
+
+</head>
+    <body>
+        <div id="top" th:fragment="top">
+            <div id="top_bar">
+                <nav>
+                    <span>
+                        <a href="/admin/login_show">进 入 后 台</a>
+                    </span>
+                    <span>  |</span>
+                    <span>注 册</span>
+                    <span>  |</span>
+                    <span>
+                        <a href="/customer/login_show">登 录</a>
+                    </span>
+                </nav>
+            </div>
+
+            <div id="banner">
+                <img src="/img/tp.jpg">
+            </div>
+
+            <div id="menu">
+                <ul>
+                    <li><a href="/" th:class="${categoryId==null?'on':''}">首页</a></li>
+                    <th:block th:each="c:${categoryList}">
+                        <li>
+                            <a th:href="@{/second(categoryId=${c.categoryId})}"
+                               th:text="${c.categoryName}"
+                                th:class ="${categoryId==c.categoryId?'on':''}"></a>
+                        </li>
+                    </th:block>
+                </ul>
+            </div>
+        </div>
+    </body>
+</html>
